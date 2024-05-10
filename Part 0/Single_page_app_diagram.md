@@ -24,3 +24,4 @@ sequenceDiagram
     server-->>browser: Notes list in JSON format.
     deactivate server
     Note right of browser: Using the data fetched from the server the list is rendered by the callback function.
+```
