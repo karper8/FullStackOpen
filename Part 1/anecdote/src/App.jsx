@@ -22,6 +22,7 @@ function App() {
 
   const [selected,setSelected] = useState(0)
 
+  //Function to generate a random number between 0 and 7 when the button is clicked.
   const handleClick = () =>{
     const rand = Math.floor(Math.random() * 8)
     setSelected(rand)
@@ -33,18 +34,18 @@ function App() {
     console.log(newVotes)
     setVotes(newVotes)
   }
- 
-    let highest = 0
-    let anec = 0
-    votes.forEach(element => {
-    if (element > highest){
-      highest = element
-      anec = votes.indexOf(highest)
-    }
+  
+  //Logic to find out the highest number in votes array which corresponds to the anecdote with the highest votes.
+  let highest = 0
+  let anec = 0
+  votes.forEach(element => {
+  if (element > highest){
+    highest = element
+    anec = votes.indexOf(highest)
+  }
     
     
   })
-  // setRandom()
   return(
     <>
       <Header text='Anecdote of the day' />
