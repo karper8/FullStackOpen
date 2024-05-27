@@ -1,22 +1,26 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import PersonForm from './components/PersonForm'
 import Persons from './components/Persons'
 import Filter from './components/Filter'
+import axios from 'axios'
 
 const App = () => {
-  const [persons, setPersons] = useState([
-  { name: 'Arto Hellas', number: '040-123456', id: 1 },
-  { name: 'Ada Lovelace', number: '39-44-5323523', id: 2 },
-  { name: 'Dan Abramov', number: '12-43-234345', id: 3 },
-  { name: 'Mary Poppendieck', number: '39-23-6423122', id: 4 }
-  ])
+  const [persons, setPersons] = useState([])
   const [newName, setNewName] = useState('')
   const [number,setNumber] = useState('')
   const [search,setSearch] = useState('')
   const [searchList,setSearchList] = useState([])
 
 
-
+  //Using effect hook to request data from the server and updating the persons state to the data recieved as a response to the request.
+  useEffect(()=>{
+    axios
+      .get('http://localhost:3001/persons')
+      .then(response=>{
+        console.log('HTTP GET reqest was successful')
+        setPersons(response.data)
+      })
+  },[])
   
   //Function to search the persons array for the value enter in the search field.
   // const handleSearch = (event) =>{
