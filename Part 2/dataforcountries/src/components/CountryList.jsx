@@ -20,8 +20,9 @@ const CountryList = ({ item }) => {
 
     return(
         <div>
-            {clicked ? <div><CountryDetails item={item} /></div>:<div>{item.name.common}</div>}
-            <button onClick={()=>{handleClick()}}>{clicked ? 'Close' : 'Show'}</button>
+            {clicked ? <div><CountryDetails item={item} /><button onClick={()=>{handleClick()}}>{clicked ? 'Close' : 'Show'}</button></div>:
+            <div>{item.name.common} <button onClick={()=>{handleClick()}}>{clicked ? 'Close' : 'Show'}</button></div>} 
+            
         </div>
     )
 }
