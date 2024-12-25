@@ -1,15 +1,24 @@
-import React from "react";
-import "../index.css"
+const Notification = ({msg}) =>{
+    const Style = {
+        color : 'grey',
+        fontStyle : 'bold',
+        fontSize : 20 ,
+        borderStyle : 'solid',
+        borderRadius : 5,
+        padding : 10,
+        marginBottom : 10
 
-const Notification = ({ message }) =>{
-    if(message === null){
+    }
+
+    if(msg===null){
         return null
     }
 
     return(
-        <div className='error'>{message}</div>
+        <div style={Style} className="error">
+            {msg}
+        </div>
     )
-
 }
 
 export default Notification
