@@ -43,8 +43,12 @@ const Total = (props) =>{
         </>
     )
 }
+
+
   
 const Course = (props) =>{
+
+  
     return(
         <>
         {/* Looping over each object in the courses array to create a seperate view for each obejct. 
