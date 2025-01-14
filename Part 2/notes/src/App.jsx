@@ -4,6 +4,7 @@ import axios from 'axios'
 import noteService from './service/notes'
 import  './index.css'
 import Notification from './components/Notification'
+import Footer from './components/Footer'
 
 function App(props) {
   const [notes,setNotes] = useState([])
@@ -95,6 +96,7 @@ function App(props) {
         <input value={newNote} onChange={handleNoteChange} />
         <button type='submit'>Save</button>
       </form>
+      <Footer />
     </div>
   )
 }
