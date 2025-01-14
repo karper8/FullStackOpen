@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build:ui":"rmdir /s dist && cd  \"../../Part 2/notes/\"  && npm run build && xcopy /S dist \"../../Part 3/Root/\" ",
+    "deploy:full": "npm run build:ui && git add . && git commit -m \"uibuild\" && git push origin "
   },
   "author": "Karthik P",
   "license": "ISC",
