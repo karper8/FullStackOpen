@@ -18,9 +18,9 @@ function App(props) {
     console.log('effect')
     noteService
       .getAll('/api/notes')
-      .then(initialNotes=>{
+      .then(initialData=>{
         console.log('promise fulfilled')
-        setNotes(initialNotes)
+        setNotes(initialData)
       })
   },[])
   console.log('render',notes.length,'notes')
@@ -28,6 +28,9 @@ function App(props) {
   
 
   const notesToShow = showAll ? notes : notes.filter(note=>note.important)
+  console.log(showAll)
+  console.log(notes)
+  console.log(notesToShow)
 
  
   const addNote = (event) =>{
