@@ -6,7 +6,7 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
-    "build:ui":"rmdir /s dist && cd  \"../../Part 2/notes\"  && npm run build && xcopy /S dist \"../../Part 3/Root/dist/\" ",
+    "build:ui": "rmdir /s dist && cd  \"../../Part 2/notes\"  && npm run build && xcopy /S dist \"../../Part 3/Root/dist/\" ",
     "deploy:full": "npm run build:ui && git add . && git commit -m \"uibuild\" && git push origin "
   },
   "author": "Karthik P",
@@ -14,7 +14,11 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.2"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.12.0",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
