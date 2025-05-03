@@ -12,8 +12,8 @@ const url =
 mongoose.set('strictQuery',false)
 
 mongoose.connect(url)
-  .then(()=>console.log('successfully connected'))
-  .catch((e)=>console.log(e))
+  .then(() => console.log('successfully connected'))
+  .catch((e) => console.log(e))
 
 
 const noteSchema = new mongoose.Schema({
