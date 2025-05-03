@@ -45,7 +45,7 @@ function App(props) {
     noteService
       .create(noteObject)
       .then(returnedNote =>{
-        console.log(response)
+        console.log(returnedNote)
         setNotes(notes.concat(returnedNote))
         setNewNote('')
       })

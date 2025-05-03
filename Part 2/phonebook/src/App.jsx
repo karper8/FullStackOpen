@@ -2,7 +2,6 @@ import { useState,useEffect } from 'react'
 import Form from './components/Form'
 import Search from './components/Search'
 import Contacts from './components/Contacts'
-import axios from 'axios'
 import Notification from './components/Notification'
 import personService from './services/person.js'
 
